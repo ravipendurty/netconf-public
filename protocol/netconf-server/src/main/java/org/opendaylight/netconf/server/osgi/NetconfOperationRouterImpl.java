@@ -30,7 +30,7 @@ import org.opendaylight.netconf.server.mapping.operations.DefaultCloseSession;
 import org.opendaylight.netconf.server.mapping.operations.DefaultNetconfOperation;
 import org.opendaylight.netconf.server.mapping.operations.DefaultStartExi;
 import org.opendaylight.netconf.server.mapping.operations.DefaultStopExi;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.opendaylight.yangtools.yang.common.ErrorSeverity;
 import org.opendaylight.yangtools.yang.common.ErrorTag;
 import org.opendaylight.yangtools.yang.common.ErrorType;

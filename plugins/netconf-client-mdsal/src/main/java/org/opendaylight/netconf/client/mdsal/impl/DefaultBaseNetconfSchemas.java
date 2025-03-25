@@ -48,7 +48,7 @@ public final class DefaultBaseNetconfSchemas implements BaseNetconfSchemas {
     private static EffectiveModelContext withoutNotifications(final YangParserFactory parserFactory)
             throws YangParserException {
         return BindingRuntimeHelpers.createEffectiveModel(parserFactory, List.of(
-            org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601
+            org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929
                 .$YangModuleInfoImpl.getInstance(),
             org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.yang.ietf.netconf.monitoring.rev101004
                 .$YangModuleInfoImpl.getInstance()));
@@ -59,7 +59,7 @@ public final class DefaultBaseNetconfSchemas implements BaseNetconfSchemas {
         return BindingRuntimeHelpers.createEffectiveModel(parserFactory, List.of(
             org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.notification._1._0.rev080714
                 .$YangModuleInfoImpl.getInstance(),
-            org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601
+            org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929
                 .$YangModuleInfoImpl.getInstance(),
             org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.yang.ietf.netconf.monitoring.rev101004
                 .$YangModuleInfoImpl.getInstance(),

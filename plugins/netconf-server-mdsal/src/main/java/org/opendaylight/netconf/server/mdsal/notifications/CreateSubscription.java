@@ -24,7 +24,7 @@ import org.opendaylight.netconf.server.api.notifications.NetconfNotificationRegi
 import org.opendaylight.netconf.server.api.operations.AbstractSingletonNetconfOperation;
 import org.opendaylight.netconf.server.api.operations.SessionAwareNetconfOperation;
 import org.opendaylight.netconf.server.spi.SubtreeFilter;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.notification._1._0.rev080714.CreateSubscriptionInput;
 import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.notification._1._0.rev080714.StreamNameType;
 import org.opendaylight.yangtools.concepts.Registration;

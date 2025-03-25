@@ -96,7 +96,7 @@ public final class NormalizedDataUtil {
     //        - is this saying we are following a specific interface contract (i.e. do we have schema mounts?)
     //        - is it also inferring some abilities w.r.t. RFC8342?
     public static final QName NETCONF_QNAME = QName.create(QNameModule.create(SchemaContext.NAME.getNamespace(),
-        Revision.of("2011-06-01")), "netconf").intern();
+        Revision.of("2013-09-29")), "netconf").intern();
     // FIXME: is this the device-bound revision?
     public static final QName NETCONF_DATA_QNAME = QName.create(NETCONF_QNAME, "data").intern();
 

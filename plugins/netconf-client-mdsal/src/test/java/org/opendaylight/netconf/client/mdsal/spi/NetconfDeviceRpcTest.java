@@ -39,7 +39,7 @@ import org.opendaylight.netconf.client.mdsal.api.RemoteDeviceCommunicator;
 import org.opendaylight.netconf.client.mdsal.api.RpcTransformer;
 import org.opendaylight.netconf.client.mdsal.impl.NetconfMessageTransformUtil;
 import org.opendaylight.netconf.client.mdsal.impl.NetconfMessageTransformer;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.IetfNetconfService;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.IetfNetconfService;
 import org.opendaylight.yangtools.yang.common.QName;
 import org.opendaylight.yangtools.yang.common.RpcResult;
 import org.opendaylight.yangtools.yang.common.RpcResultBuilder;
@@ -91,7 +91,7 @@ public class NetconfDeviceRpcTest extends AbstractBaseSchemasTest {
                 .when(communicator).sendRequest(any(NetconfMessage.class), any(QName.class));
         rpc = new NetconfDeviceRpc(SCHEMA_CONTEXT, communicator, transformer);
 
-        type = QName.create("urn:ietf:params:xml:ns:netconf:base:1.0", "2011-06-01", "get-config");
+        type = QName.create("urn:ietf:params:xml:ns:netconf:base:1.0", "2013-09-29", "get-config");
         expectedReply = transformer.toRpcResult(RpcResultBuilder.success(reply).build(), type);
     }
 
@@ -111,7 +111,7 @@ public class NetconfDeviceRpcTest extends AbstractBaseSchemasTest {
 
     @Test
     public void testInvokeRpc() throws Exception {
-        ContainerNode input = createNode("urn:ietf:params:xml:ns:netconf:base:1.0", "2011-06-01", "filter");
+        ContainerNode input = createNode("urn:ietf:params:xml:ns:netconf:base:1.0", "2013-09-29", "filter");
         final DOMRpcResult result = rpc.invokeRpc(type, input).get();
         assertEquals(expectedReply.value().name(), result.value().name());
         assertEquals(resolveNode(expectedReply), resolveNode(result));

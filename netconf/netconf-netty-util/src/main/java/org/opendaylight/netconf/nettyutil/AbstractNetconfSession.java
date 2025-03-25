@@ -31,7 +31,7 @@ import org.opendaylight.netconf.nettyutil.handler.NetconfMessageToEXIEncoder;
 import org.opendaylight.netconf.nettyutil.handler.exi.EXIParameters;
 import org.opendaylight.netconf.shaded.exificient.core.exceptions.EXIException;
 import org.opendaylight.netconf.shaded.exificient.core.exceptions.UnsupportedOption;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

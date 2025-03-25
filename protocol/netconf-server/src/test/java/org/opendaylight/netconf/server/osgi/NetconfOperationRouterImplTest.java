@@ -31,7 +31,7 @@ import org.opendaylight.netconf.server.api.operations.HandlingPriority;
 import org.opendaylight.netconf.server.api.operations.NetconfOperation;
 import org.opendaylight.netconf.server.api.operations.NetconfOperationChainedExecution;
 import org.opendaylight.netconf.server.api.operations.NetconfOperationService;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.opendaylight.yangtools.yang.common.ErrorTag;
 import org.opendaylight.yangtools.yang.common.Uint32;
 import org.w3c.dom.Document;

@@ -29,7 +29,7 @@ import org.opendaylight.netconf.api.xml.XmlUtil;
 import org.opendaylight.netconf.nettyutil.AbstractChannelInitializer;
 import org.opendaylight.netconf.nettyutil.AbstractNetconfSessionNegotiator;
 import org.opendaylight.netconf.nettyutil.handler.exi.NetconfStartExiMessage;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.opendaylight.yangtools.yang.common.Uint32;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -14,7 +14,7 @@ import java.util.Optional;
 import java.util.Set;
 import org.junit.Test;
 import org.opendaylight.netconf.api.NetconfDocumentedException;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.opendaylight.yangtools.yang.common.Uint32;
 
 public class HelloMessageTest {

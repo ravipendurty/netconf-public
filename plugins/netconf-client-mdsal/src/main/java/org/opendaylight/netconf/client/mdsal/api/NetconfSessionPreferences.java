@@ -25,7 +25,7 @@ import org.eclipse.jdt.annotation.Nullable;
 import org.opendaylight.netconf.api.CapabilityURN;
 import org.opendaylight.netconf.client.NetconfClientSession;
 import org.opendaylight.netconf.client.mdsal.impl.NetconfMessageTransformUtil;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.opendaylight.yang.gen.v1.urn.opendaylight.netconf.device.rev240118.connection.oper.available.capabilities.AvailableCapability.CapabilityOrigin;
 import org.opendaylight.yangtools.yang.common.QName;
 import org.opendaylight.yangtools.yang.common.XMLNamespace;

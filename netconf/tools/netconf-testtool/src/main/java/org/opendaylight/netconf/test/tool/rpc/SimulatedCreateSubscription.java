@@ -30,7 +30,7 @@ import org.opendaylight.netconf.api.xml.XmlUtil;
 import org.opendaylight.netconf.server.NetconfServerSession;
 import org.opendaylight.netconf.server.api.operations.AbstractLastNetconfOperation;
 import org.opendaylight.netconf.server.mapping.operations.DefaultNetconfOperation;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.xml.sax.SAXException;

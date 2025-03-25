@@ -57,7 +57,7 @@ public class SchemalessNetconfDeviceRpcTest extends AbstractBaseSchemasTest {
 
     @Test
     public void testInvokeRpc() throws Exception {
-        final QName qName = QName.create("urn:ietf:params:xml:ns:netconf:base:1.0", "2011-06-01", "get-config");
+        final QName qName = QName.create("urn:ietf:params:xml:ns:netconf:base:1.0", "2013-09-29", "get-config");
         DOMSource src = new DOMSource(XmlUtil.readXmlToDocument("<get-config xmlns=\"dd\">\n"
                 + "    <source>\n"
                 + "      <running/>\n"

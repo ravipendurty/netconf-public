@@ -23,7 +23,7 @@ import org.opendaylight.netconf.test.tool.rpc.SimulatedGet;
 import org.opendaylight.netconf.test.tool.rpc.SimulatedGetConfig;
 import org.opendaylight.netconf.test.tool.rpc.SimulatedLock;
 import org.opendaylight.netconf.test.tool.rpc.SimulatedUnLock;
-import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev110601.SessionIdType;
+import org.opendaylight.yang.gen.v1.urn.ietf.params.xml.ns.netconf.base._1._0.rev130929.SessionIdType;
 
 public final class DefaultOperationsCreator implements OperationsCreator {
 
