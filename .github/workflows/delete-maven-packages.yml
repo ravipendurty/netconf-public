@@ -1,0 +1,21 @@
+name: Delete Old Maven Packages
+
+on:
+  workflow_dispatch:
+
+jobs:
+  delete-old-maven:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        package-name: [ "package-one", "package-two", "package-three" ]  # 👈 Add more here
+
+    steps:
+      - name: Delete ALL versions of ${{ matrix.package-name }}
+        uses: actions/delete-package-versions@v5
+        with:
+          package-name: ${{ matrix.package-name }}
+          package-type: 'maven'
+          min-versions-to-keep: 0
+          delete-only-pre-release-versions: false
+          #token: ${{ secrets.DELETE_PACKAGES_PAT }}
