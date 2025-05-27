@@ -4,18 +4,43 @@ on:
   workflow_dispatch:
 
 jobs:
-  delete-old-maven:
+  fetch-packages:
     runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.set-matrix.outputs.packages }}
+    steps:
+      - name: Install GitHub CLI
+        uses: cli/cli@v2
+
+      - name: Authenticate with GitHub CLI
+        run: echo "${{ secrets.DELETE_PACKAGES_PAT }}" | gh auth login --with-token
+
+      - name: Fetch all Maven packages for user
+        run: |
+          gh api users/${{ github.actor }}/packages?package_type=maven > packages.json
+
+      - name: Filter packages belonging to this repo
+        id: set-matrix
+        run: |
+          REPO_NAME="${{ github.repository }}"
+          PACKAGE_NAMES=$(jq -r '.[] | select(.repository.full_name == "'$REPO_NAME'") | .name' packages.json | jq -R -s -c 'split("\n") | map(select(. != ""))')
+          echo "Filtered Packages: $PACKAGE_NAMES"
+          echo "packages=$PACKAGE_NAMES" >> $GITHUB_OUTPUT
+
+  delete-packages:
+    needs: fetch-packages
+    runs-on: ubuntu-latest
+    if: needs.fetch-packages.outputs.packages != '[]'
     strategy:
       matrix:
-        package-name: [ "package-one", "package-two", "package-three" ]  # 👈 Add more here
+        package-name: ${{ fromJson(needs.fetch-packages.outputs.packages) }}
 
     steps:
-      - name: Delete ALL versions of ${{ matrix.package-name }}
+      - name: Delete all versions of ${{ matrix.package-name }}
         uses: actions/delete-package-versions@v5
         with:
           package-name: ${{ matrix.package-name }}
-          package-type: 'maven'
+          package-type: maven
           min-versions-to-keep: 0
           delete-only-pre-release-versions: false
-          #token: ${{ secrets.DELETE_PACKAGES_PAT }}
+          token: ${{ secrets.DELETE_PACKAGES_PAT }}
