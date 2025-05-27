@@ -9,8 +9,8 @@ jobs:
     outputs:
       packages: ${{ steps.set-matrix.outputs.packages }}
     steps:
-      - name: Install GitHub CLI
-        uses: cli/cli@v2
+      # - name: Install GitHub CLI
+      #   uses: cli/cli@v2
 
       - name: Authenticate with GitHub CLI
         run: echo "${{ secrets.DELETE_PACKAGES_PAT }}" | gh auth login --with-token
